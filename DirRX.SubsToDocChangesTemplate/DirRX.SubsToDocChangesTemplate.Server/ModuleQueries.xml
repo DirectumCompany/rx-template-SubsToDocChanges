@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<queries>
+  <query key="SelectDocflowParamsValue">
+    <mssql><![CDATA[SELECT Value FROM Sungero_Docflow_Params WHERE ([Key] = '{0}')]]></mssql>
+    <postgres><![CDATA[SELECT Value FROM Sungero_Docflow_Params WHERE (Key = '{0}')]]></postgres>
+  </query>
+  <query key="InsertOrUpdateDocflowParamsValue">
+    <mssql><![CDATA[if not exists(select 1 from [dbo].[Sungero_Docflow_Params] where [Key] = '{0}')
+  insert [Sungero_Docflow_Params] ([Key],Value) values ('{0}', '{1}')
+else UPDATE Sungero_Docflow_Params SET Value = '{1}' WHERE ([Key] = '{0}')]]></mssql>
+    <postgres><![CDATA[do $$
+begin
+  if not exists(select 1 from Sungero_Docflow_Params where Key = '{0}')
+  then
+    insert into Sungero_Docflow_Params (Key, Value) values ('{0}', '{1}');
+  else
+    UPDATE Sungero_Docflow_Params SET Value = '{1}' WHERE (Key = '{0}');
+  end if;
+end$$;]]></postgres>
+  </query>
+  <query key="SelectNewDocChanges">
+    <mssql><![CDATA[SELECT [HistoryDate]
+      ,[User]
+      ,[EntityId]
+      ,[EntityType]
+      ,[Action]
+      ,[Operation]
+      ,[OperationDet]
+      ,[Comment]
+      ,isnull([Operation], [OperationDet]) as ActionName
+FROM Sungero_Content_DocHistory 
+WHERE 
+  EntityType in ('{0}')
+  and (
+      (Action = 'Update' and Operation = 'CreateVersion' and VersionNumber > 1) or
+      (Action = 'Update' and Operation = 'DeleteVersion') or
+      (Action = 'ChangeRelation' and OperationDet = 'AddRelation') or
+      (Action = 'ChangeRelation' and OperationDet = 'RemoveRelation') or
+      (Action = 'Update' and Operation = 'EnOnApproval') or
+      (Action = 'Update' and Operation = 'Registration') or
+      (Action = 'Update' and Operation = 'Unregistration') or
+      (Action = 'Sign' and OperationDet = 'Approve') or
+      (Action = 'Update' and OperationDet = 'EnOnRework') or
+      (Action = 'Update' and OperationDet = 'EnAborted') or
+      (Action = 'Update' and OperationDet = 'EnReviewed') or
+      (Action = 'Update' and OperationDet = 'ExOnExecution') or
+      (Action = 'Update' and OperationDet = 'ExExecuted') or
+      (Action = 'Update' and OperationDet = 'ExAborted') or
+      (Action = 'Update' and OperationDet = 'CEOnApproval') or
+      (Action = 'Update' and OperationDet = 'CESigned') or
+      (Action = 'Update' and OperationDet = 'CEUnsigned') or
+      (Action = 'Update' and OperationDet = 'TAChange')
+      )
+  and [HistoryDate] > @previousDate
+  order by [HistoryDate]]]></mssql>
+    <postgres><![CDATA[SELECT [HistoryDate]
+      ,[User]
+      ,[EntityId]
+      ,[EntityType]
+      ,[Action]
+      ,[Operation]
+      ,[OperationDet]
+      ,[Comment]
+      ,isnull([Operation], [OperationDet]) as ActionName
+FROM Sungero_Content_DocHistory
+WHERE 
+  EntityType in ('{0}')
+  and (
+      (Action = 'Update' and Operation = 'CreateVersion' and VersionNumber > 1) or
+      (Action = 'Update' and Operation = 'DeleteVersion') or
+      (Action = 'ChangeRelation' and OperationDet = 'AddRelation') or
+      (Action = 'ChangeRelation' and OperationDet = 'RemoveRelation') or
+      (Action = 'Update' and Operation = 'EnOnApproval') or
+      (Action = 'Update' and Operation = 'Registration') or
+      (Action = 'Update' and Operation = 'Unregistration') or
+      (Action = 'Sign' and OperationDet = 'Approve') or
+      (Action = 'Update' and OperationDet = 'EnOnRework') or
+      (Action = 'Update' and OperationDet = 'EnAborted') or
+      (Action = 'Update' and OperationDet = 'EnReviewed') or
+      (Action = 'Update' and OperationDet = 'ExOnExecution') or
+      (Action = 'Update' and OperationDet = 'ExExecuted') or
+      (Action = 'Update' and OperationDet = 'ExAborted') or
+      (Action = 'Update' and OperationDet = 'CEOnApproval') or
+      (Action = 'Update' and OperationDet = 'CESigned') or
+      (Action = 'Update' and OperationDet = 'CEUnsigned') or
+      (Action = 'Update' and OperationDet = 'TAChange')
+      )
+  and HistoryDate > @previousDate
+  order by HistoryDate]]></postgres>
+  </query>
+</queries>

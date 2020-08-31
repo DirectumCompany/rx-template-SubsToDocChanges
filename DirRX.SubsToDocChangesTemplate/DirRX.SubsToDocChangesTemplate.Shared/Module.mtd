@@ -1,0 +1,179 @@
+{
+  "$type": "Sungero.Metadata.ModuleMetadata, Sungero.Metadata",
+  "NameGuid": "3366d231-b554-4664-aef8-71f5ae0fc59a",
+  "Name": "SubsToDocChangesTemplate",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "DirRX.SubsToDocChangesTemplate.Client",
+  "ClientBaseAssemblyName": "DirRX.SubsToDocChangesTemplate.ClientBase",
+  "ClientBaseNamespace": "DirRX.SubsToDocChangesTemplate.ClientBase",
+  "ClientNamespace": "DirRX.SubsToDocChangesTemplate.Client",
+  "Code": "SubsToD",
+  "CompanyCode": "DirRX",
+  "Cover": {
+    "NameGuid": "0d611c94-6d22-462d-a771-a6e6a7f09e38",
+    "Actions": [],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "ff364c83-aaf5-4504-8134-2654ff121e0d",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [],
+    "Header": {
+      "NameGuid": "350206f2-1047-4fa0-8e01-8fcb6e1a4dac",
+      "BackgroundPosition": "Stretch"
+    }
+  },
+  "Dependencies": [
+    {
+      "Id": "f1ca7904-d54c-4152-aeb4-a699e11eb0e1",
+      "IsSolutionModule": true,
+      "MaxVersion": "",
+      "MinVersion": ""
+    },
+    {
+      "Id": "4e25caec-c722-4740-bcfd-c4f803840ac6",
+      "MaxVersion": "",
+      "MinVersion": "3.4.23.1"
+    }
+  ],
+  "ExplorerTreeOrder": [
+    {
+      "ItemId": "6fd9f10f-0612-42e5-a939-2b9f5a8d3ed0"
+    }
+  ],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "DirRX.SubsToDocChangesTemplate",
+  "IsVisible": false,
+  "Jobs": [
+    {
+      "NameGuid": "f0743084-ba5e-4ef1-bafd-50a8db539448",
+      "Name": "SendDocumentNotices",
+      "Daily": "Repeat",
+      "GenerateHandler": true,
+      "MonthSchedule": "Monthly",
+      "TimePeriod": 20
+    }
+  ],
+  "Overridden": [
+    "IsVisible"
+  ],
+  "PublicConstants": [
+    {
+      "Name": "CompanyDirective",
+      "ParentClasses": [
+        "Module",
+        "DocumentTypeGuid"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"264ada4e-b272-4ecc-a115-1246c9556bfa\""
+    },
+    {
+      "Name": "Contract",
+      "ParentClasses": [
+        "Module",
+        "DocumentTypeGuid"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"f37c7e63-b134-4446-9b5b-f8811f6c9666\""
+    },
+    {
+      "Name": "IncomingLetter",
+      "ParentClasses": [
+        "Module",
+        "DocumentTypeGuid"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"8dd00491-8fd0-4a7a-9cf3-8b6dc2e6455d\""
+    },
+    {
+      "Name": "Memo",
+      "ParentClasses": [
+        "Module",
+        "DocumentTypeGuid"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"95af409b-83fe-4697-a805-5a86ceec33f5\""
+    },
+    {
+      "Name": "Order",
+      "ParentClasses": [
+        "Module",
+        "DocumentTypeGuid"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"9570e517-7ab7-4f23-a959-3652715efad3\""
+    },
+    {
+      "Name": "OutgoingLetter",
+      "ParentClasses": [
+        "Module",
+        "DocumentTypeGuid"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"d1d2a452-7732-4ba8-b199-0a4dc78898ac\""
+    },
+    {
+      "Name": "SupAgreement",
+      "ParentClasses": [
+        "Module",
+        "DocumentTypeGuid"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"265f2c57-6a8a-4a15-833b-ca00e8047fa5\""
+    }
+  ],
+  "PublicStructures": [
+    {
+      "Name": "DocumentEvents",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "DocumentId",
+          "TypeFullName": "global::System.Int32"
+        },
+        {
+          "Name": "UserId",
+          "TypeFullName": "global::System.Int32"
+        },
+        {
+          "Name": "EntityType",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "DocumentEvent",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Comment",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        }
+      ],
+      "StructureNamespace": "DirRX.SubsToDocChangesTemplate.Structures.Module"
+    }
+  ],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "DirRX.SubsToDocChangesTemplate",
+  "ResourcesKeys": [],
+  "ServerAssemblyName": "DirRX.SubsToDocChangesTemplate.Server",
+  "ServerNamespace": "DirRX.SubsToDocChangesTemplate.Server",
+  "SharedAssemblyName": "DirRX.SubsToDocChangesTemplate.Shared",
+  "SharedNamespace": "DirRX.SubsToDocChangesTemplate.Shared",
+  "SpecialFolders": [],
+  "Version": "0.0.1.0",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "ModuleMetadata",
+      "Number": 6
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}
