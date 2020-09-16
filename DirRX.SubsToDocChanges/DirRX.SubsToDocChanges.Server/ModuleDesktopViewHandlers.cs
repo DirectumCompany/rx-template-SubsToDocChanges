@@ -4,7 +4,7 @@ using System.Linq;
 using Sungero.Core;
 using Sungero.CoreEntities;
 
-namespace DirRX.Solution.Client
+namespace DirRX.SubsToDocChanges.Server
 {
 
 }

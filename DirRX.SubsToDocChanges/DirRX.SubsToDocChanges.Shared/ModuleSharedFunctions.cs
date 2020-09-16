@@ -4,7 +4,10 @@ using System.Linq;
 using Sungero.Core;
 using Sungero.CoreEntities;
 
-namespace DirRX.Solution.Structures.Module
+namespace DirRX.SubsToDocChanges.Shared
 {
+  public class ModuleFunctions
+  {
 
+  }
 }

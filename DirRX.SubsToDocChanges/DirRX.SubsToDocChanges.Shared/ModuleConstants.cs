@@ -1,7 +1,7 @@
 using System;
 using Sungero.Core;
 
-namespace DirRX.Solution.Constants
+namespace DirRX.SubsToDocChanges.Constants
 {
   public static class Module
   {

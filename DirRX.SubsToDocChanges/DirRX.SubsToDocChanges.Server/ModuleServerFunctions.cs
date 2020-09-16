@@ -4,9 +4,9 @@ using System.Linq;
 using Sungero.Core;
 using Sungero.CoreEntities;
 
-namespace DirRX.Solution.Server
+namespace DirRX.SubsToDocChanges.Server
 {
-  public class ModuleJobs
+  public class ModuleFunctions
   {
 
   }
