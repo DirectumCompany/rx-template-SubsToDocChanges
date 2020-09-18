@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="LabelInformation" xml:space="preserve">
-    <value>In the list, select events, on which you want to receive notices. Notice settings are made for the events that cannot be changed. To change them, contact your system administrator.</value>
+    <value>In the list, select events, on which you want to receive notices.</value>
   </data>
   <data name="SameSettingExists" xml:space="preserve">
     <value>Setting for the selected role already exists. Select another role.</value>

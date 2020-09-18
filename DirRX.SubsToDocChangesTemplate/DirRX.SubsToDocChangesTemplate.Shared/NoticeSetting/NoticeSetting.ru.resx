@@ -118,8 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="LabelInformation" xml:space="preserve">
-    <value>Отметьте в списке те события, по которым вы хотели бы получать уведомления.
-Для недоступных на изменение событий уже создана настройка уведомлений. Для их изменения обратитесь к администратору.</value>
+    <value>Отметьте в списке те события, по которым вы хотели бы получать уведомления.</value>
   </data>
   <data name="SameSettingExists" xml:space="preserve">
     <value>Для выбранной роли уже существует настройка, выберите другую роль.</value>
