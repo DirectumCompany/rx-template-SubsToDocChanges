@@ -40,8 +40,8 @@ WHERE
       (Action = 'Update' and Operation = 'Registration') or
       (Action = 'Update' and Operation = 'Unregistration') or
       (Action = 'Sign' and OperationDet = 'Approve') or
-      (Action = 'Update' and OperationDet = 'EnOnRework') or
-      (Action = 'Update' and OperationDet = 'EnAborted') or
+      (Action = 'Update' and Operation = 'EnOnRework') or
+      (Action = 'Update' and Operation = 'EnAborted') or
       (Action = 'Update' and OperationDet = 'EnReviewed') or
       (Action = 'Update' and OperationDet = 'ExOnExecution') or
       (Action = 'Update' and OperationDet = 'ExExecuted') or
@@ -74,8 +74,8 @@ WHERE
       (Action = 'Update' and Operation = 'Registration') or
       (Action = 'Update' and Operation = 'Unregistration') or
       (Action = 'Sign' and OperationDet = 'Approve') or
-      (Action = 'Update' and OperationDet = 'EnOnRework') or
-      (Action = 'Update' and OperationDet = 'EnAborted') or
+      (Action = 'Update' and Operation = 'EnOnRework') or
+      (Action = 'Update' and Operation = 'EnAborted') or
       (Action = 'Update' and OperationDet = 'EnReviewed') or
       (Action = 'Update' and OperationDet = 'ExOnExecution') or
       (Action = 'Update' and OperationDet = 'ExExecuted') or
