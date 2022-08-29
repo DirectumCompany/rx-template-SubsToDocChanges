@@ -21,7 +21,8 @@
     "Header": {
       "NameGuid": "350206f2-1047-4fa0-8e01-8fcb6e1a4dac",
       "BackgroundPosition": "Stretch"
-    }
+    },
+    "Tabs": []
   },
   "Dependencies": [
     {
@@ -169,7 +170,7 @@
   "Versions": [
     {
       "Type": "ModuleMetadata",
-      "Number": 6
+      "Number": 8
     },
     {
       "Type": "DomainApi",
