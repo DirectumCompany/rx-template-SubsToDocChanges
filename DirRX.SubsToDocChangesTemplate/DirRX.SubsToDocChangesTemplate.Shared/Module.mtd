@@ -46,6 +46,8 @@
   "Importance": "Medium",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "InterfaceNamespace": "DirRX.SubsToDocChangesTemplate",
+  "IsolatedAssemblyName": "DirRX.SubsToDocChangesTemplate.Isolated",
+  "IsolatedNamespace": "DirRX.SubsToDocChangesTemplate.Isolated",
   "IsVisible": false,
   "Jobs": [
     {
