@@ -104,7 +104,7 @@ namespace DirRX.SubsToDocChangesTemplate.Server
     /// <returns>Список сотрудников (словарь: Key - сотрудник, Value - Роль).</returns>
     [Public]
     public static System.Collections.Generic.Dictionary<Sungero.Company.IEmployee, Enumeration> GetPerformersForEvent(string documentEvent, Sungero.Docflow.IOfficialDocument document,
-                                                                                                                      Sungero.Docflow.IDocumentType documentType, int eventInitiatorId)
+                                                                                                                      Sungero.Docflow.IDocumentType documentType, long eventInitiatorId)
     {
       var performers = new Dictionary<Sungero.Company.IEmployee, Enumeration>();
       
@@ -172,7 +172,7 @@ namespace DirRX.SubsToDocChangesTemplate.Server
                                     Sungero.Company.IEmployee newPerformer,
                                     Enumeration role,
                                     Sungero.Docflow.IDocumentType documentType,
-                                    string documentEvent, int eventInitiatorId)
+                                    string documentEvent, long eventInitiatorId)
     {
       if (newPerformer == null ||
           performers.Keys.Any(e => Sungero.Company.Employees.Equals(e, newPerformer)) || Sungero.CoreEntities.Users.As(newPerformer).Id == eventInitiatorId ||
