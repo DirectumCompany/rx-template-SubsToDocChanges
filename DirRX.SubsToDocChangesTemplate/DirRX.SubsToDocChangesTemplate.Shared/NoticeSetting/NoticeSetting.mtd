@@ -704,8 +704,8 @@
         },
         {
           "Name": "eventInitiatorId",
-          "ParameterType": "global::System.Int32",
-          "ParameterTypeFullName": "System.Int32"
+          "ParameterType": "global::System.Int64",
+          "ParameterTypeFullName": "System.Int64"
         }
       ],
       "ReturnType": "System.Collections.Generic.Dictionary<global::Sungero.Company.IEmployee, global::Sungero.Core.Enumeration>"
@@ -760,7 +760,7 @@
   "Versions": [
     {
       "Type": "EntityMetadata",
-      "Number": 11
+      "Number": 12
     }
   ]
 }

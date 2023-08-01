@@ -47,8 +47,8 @@ namespace DirRX.SubsToDocChangesTemplate.Server
           {
             while (reader.Read())
             {
-              var documentId = SafeGetInt(reader, reader.GetOrdinal("EntityId")) ?? 0;
-              var eventInitiatorId = SafeGetInt(reader, reader.GetOrdinal("User")) ?? 0;
+              var documentId = SafeGetLong(reader, reader.GetOrdinal("EntityId")) ?? 0;
+              var eventInitiatorId = SafeGetLong(reader, reader.GetOrdinal("User")) ?? 0;
               var entityType = SafeGetGuid(reader, reader.GetOrdinal("EntityType"));
               var documentEvent = SafeGetString(reader, reader.GetOrdinal("ActionName"));
               var comment = SafeGetString(reader, reader.GetOrdinal("Comment"));
@@ -137,10 +137,10 @@ namespace DirRX.SubsToDocChangesTemplate.Server
     
     #region Получить целое число из значения System.Data.IDataReader
     
-    public static int? SafeGetInt(System.Data.IDataReader reader, int colIndex)
+    public static long? SafeGetLong(System.Data.IDataReader reader, int colIndex)
     {
       if(!reader.IsDBNull(colIndex))
-        return reader.GetInt32(colIndex);
+        return reader.GetInt64(colIndex);
       return null;
     }
     

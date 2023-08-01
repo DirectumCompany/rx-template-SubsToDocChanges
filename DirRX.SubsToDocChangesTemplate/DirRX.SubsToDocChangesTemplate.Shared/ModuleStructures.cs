@@ -10,9 +10,9 @@ namespace DirRX.SubsToDocChangesTemplate.Structures.Module
   [Public]
   partial class DocumentEvents
   {
-    public int DocumentId { get; set; }
+    public long DocumentId { get; set; }
     
-    public int UserId { get; set; }
+    public long UserId { get; set; }
     
     public string EntityType { get; set; }
     
