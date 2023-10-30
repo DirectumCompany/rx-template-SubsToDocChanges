@@ -134,11 +134,11 @@
       "Properties": [
         {
           "Name": "DocumentId",
-          "TypeFullName": "global::System.Int32"
+          "TypeFullName": "global::System.Int64"
         },
         {
           "Name": "UserId",
-          "TypeFullName": "global::System.Int32"
+          "TypeFullName": "global::System.Int64"
         },
         {
           "Name": "EntityType",
